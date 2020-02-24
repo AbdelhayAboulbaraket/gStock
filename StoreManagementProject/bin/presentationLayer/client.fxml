@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #f1f7ff;" stylesheets="@tablestyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentationLayer.ClientController">
+   <children>
+      <VBox layoutX="-1.0" prefHeight="400.0" prefWidth="107.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="inventaire_btn" mnemonicParsing="false" onMouseClicked="#show_inventaire" prefHeight="80.0" prefWidth="111.0" text="INVENTAIRE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="vente_btn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#show_ventes" prefHeight="80.0" prefWidth="111.0" text="VENTES">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="fournisseur_btn" layoutX="10.0" layoutY="90.0" mnemonicParsing="false" onMouseClicked="#show_fournisseur" prefHeight="80.0" prefWidth="111.0" text="FOURNISSEURS">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="employer_btn" layoutX="10.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#show_employer" prefHeight="80.0" prefWidth="111.0" text="EMPLOYERS">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="250.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="111.0" text="CLIENTS">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <Pane layoutX="106.0" prefHeight="400.0" prefWidth="694.0">
+         <children>
+            <Label layoutX="117.0" layoutY="77.0" text="Rechercher :" />
+            <TextField fx:id="chercherField" layoutX="200.0" layoutY="73.0" onMouseClicked="#chercherClient" prefHeight="25.0" prefWidth="316.0" />
+            <Button fx:id="chercherBoutton" layoutX="532.0" layoutY="73.0" mnemonicParsing="false" onMouseClicked="#chercherClient" text="Chercher" />
+            <Label layoutX="286.0" layoutY="14.0" prefHeight="40.0" prefWidth="123.0" text="Clients">
+               <font>
+                  <Font name="Century Gothic Bold" size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tbData" layoutY="126.0" prefHeight="200.0" prefWidth="694.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="35.0" text="Id" />
+                <TableColumn fx:id="nom" prefWidth="174.0" text="Nom" />
+                <TableColumn fx:id="tel" minWidth="0.0" prefWidth="117.0" text="Tel" />
+                <TableColumn fx:id="email" prefWidth="163.0" text="Email" />
+                <TableColumn fx:id="adresse" prefWidth="204.0" text="Adresse" />
+                
+                
+              	
+              	
+              </columns>
+            </TableView>
+            <Button fx:id="ajouter_btn" layoutX="484.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#ajouterClient" text="Ajouter" />
+            <Button fx:id="modifierBoutton" layoutX="539.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#modifierClient" text="Modifier" />
+            <Button layoutX="600.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#supprimerClient" text="Supprimer" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

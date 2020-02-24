@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="540.0" style="-fx-background-color: #f1f7ff;" stylesheets="@tablestyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentationLayer.AjouterProduitController">
+   <children>
+      <Label layoutX="70.0" layoutY="100.0" prefHeight="22.0" prefWidth="146.0" text="Id                          :">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="140.0" text="Nom                     :">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="180.0" text="Fournisseur          :">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="220.0" text="Quantité              :">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="345.0" text="Description          :">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="300.0" text="Prix de vente       :">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="260.0" text="Prix d'achat         :">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idField" layoutX="273.0" layoutY="99.0" prefHeight="25.0" prefWidth="195.0" />
+      <TextField fx:id="nomField" layoutX="273.0" layoutY="139.0" prefHeight="25.0" prefWidth="195.0" />
+      <TextField fx:id="quantiteField" layoutX="273.0" layoutY="219.0" prefHeight="25.0" prefWidth="195.0" />
+      <TextField fx:id="prixAchatField" layoutX="273.0" layoutY="259.0" prefHeight="25.0" prefWidth="195.0" />
+      <TextField fx:id="prixVenteField" layoutX="273.0" layoutY="299.0" prefHeight="25.0" prefWidth="195.0" />
+      <TextField fx:id="descriptionField" layoutX="273.0" layoutY="344.0" prefHeight="64.0" prefWidth="195.0" />
+      <HBox layoutX="-9.0" layoutY="-6.0" prefHeight="91.0" prefWidth="555.0" style="-fx-background-color: #347599;" />
+      <HBox layoutX="-9.0" layoutY="415.0" prefHeight="91.0" prefWidth="549.0" style="-fx-background-color: #347599;" />
+      <Label layoutX="186.0" layoutY="14.0" prefHeight="54.0" prefWidth="229.0" text="Ajouter :   " textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="42.0" />
+         </font>
+      </Label>
+      <Button fx:id="valider_btn" layoutX="379.0" layoutY="438.0" mnemonicParsing="false" onMouseClicked="#ajouterProduit" text="Valider" />
+      <Button fx:id="retour_btn" layoutX="432.0" layoutY="438.0" mnemonicParsing="false" onMouseClicked="#retourner" text="Retour" />
+      <ChoiceBox fx:id="fournisseurChoix" layoutX="274.0" layoutY="179.0" prefHeight="25.0" prefWidth="195.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #f1f7ff;" stylesheets="@tablestyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentationLayer.ProduitController">
+	<children>
+		<VBox layoutX="-1.0" prefHeight="400.0" prefWidth="107.0">
+			<children>
+				<VBox prefHeight="400.0" prefWidth="100.0">
+					<children>
+						<Button mnemonicParsing="false" prefHeight="80.0" prefWidth="111.0" style="-fx-background-color: ;" text="INVENTAIRE">
+							<font>
+								<Font name="Century Gothic Bold" size="12.0" />
+							</font>
+						</Button>
+						<Button fx:id="vente_btn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#show_ventes" prefHeight="80.0" prefWidth="111.0" text="VENTES">
+							<font>
+								<Font name="Century Gothic Bold" size="12.0" />
+							</font>
+						</Button>
+						<Button fx:id="fournisseur_btn" layoutX="10.0" layoutY="90.0" mnemonicParsing="false" onMouseClicked="#show_fournisseur" prefHeight="80.0" prefWidth="111.0" text="FOURNISSEURS">
+							<font>
+								<Font name="System Bold" size="12.0" />
+							</font>
+						</Button>
+						<Button fx:id="employer_btn" layoutX="10.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#show_employer" prefHeight="80.0" prefWidth="111.0" text="EMPLOYERS">
+							<font>
+								<Font name="Century Gothic Bold" size="12.0" />
+							</font>
+						</Button>
+						<Button fx:id="client_btn" layoutX="10.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#show_client" prefHeight="80.0" prefWidth="111.0" text="CLIENTS">
+							<font>
+								<Font name="Century Gothic Bold" size="12.0" />
+							</font>
+						</Button>
+					</children>
+				</VBox>
+			</children>
+		</VBox>
+		<Pane layoutX="106.0" prefHeight="400.0" prefWidth="694.0">
+			<children>
+				<Label layoutX="105.0" layoutY="77.0" text="Rechercher :" />
+				<TextField fx:id="chercherField" layoutX="200.0" layoutY="73.0" prefHeight="25.0" prefWidth="316.0" />
+				<Button fx:id="chercherBoutton" layoutX="570.0" layoutY="73.0" mnemonicParsing="false" onMouseClicked="#chercherProduit" text="Chercher" />
+				<Label layoutX="286.0" layoutY="14.0" prefHeight="40.0" prefWidth="123.0" text="Mes Produits">
+					<font>
+						<Font name="Century Gothic Bold" size="20.0" />
+					</font>
+				</Label>
+				<TableView fx:id="tbData" layoutY="126.0" prefHeight="200.0" prefWidth="694.0">
+              <columns>
+                <TableColumn fx:id="idProduit" prefWidth="30.0" text="Id" />
+                <TableColumn fx:id="nom" prefWidth="100.0" text="Nom" />
+                <TableColumn fx:id="fournisseur" prefWidth="100.0" text="Fournisseur" />
+              	<TableColumn fx:id="quantite" prefWidth="50.0" text="Qte" />
+              	 <TableColumn fx:id="reste" prefWidth="50.0" text="Reste" />
+                <TableColumn fx:id="prixAchat" prefWidth="67.0" text="Prix Achat" />
+                <TableColumn fx:id="prixVente" prefWidth="64.0" text="Prix Vente" />
+                <TableColumn fx:id="dateAchat" prefWidth="72.0" text="Date Achat" />
+                <TableColumn fx:id="description" prefWidth="160.0" text="Description" />
+                
+                
+                
+              	
+              	
+              </columns>
+            </TableView>
+				<Button fx:id="Ajouter_btn" layoutX="484.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#ajouter" text="Ajouter" />
+				<Button fx:id="modifier_btn" layoutX="539.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#modifier" text="Modifier" />
+				<Button fx:id="supprimerBoutton" layoutX="600.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#supprimerProduit" text="Supprimer" />
+			</children>
+		</Pane>
+	</children>
+</AnchorPane>

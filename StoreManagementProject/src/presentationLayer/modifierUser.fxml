@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="540.0" style="-fx-background-color: #f1f7ff;" stylesheets="@tablestyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentationLayer.ModifierUserController">
+   <children>
+      <Label layoutX="70.0" layoutY="100.0" prefHeight="22.0" prefWidth="146.0" text="Login                    :">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="140.0" text="Nom                     :">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="71.0" layoutY="180.0" prefHeight="22.0" prefWidth="157.0" text="Prenom                :">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="220.0" prefHeight="22.0" prefWidth="163.0" text="Mot de pass        :">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField layoutX="273.0" layoutY="99.0" prefHeight="25.0" prefWidth="195.0" />
+      <TextField layoutX="273.0" layoutY="139.0" prefHeight="25.0" prefWidth="195.0" />
+      <TextField layoutX="273.0" layoutY="179.0" prefHeight="25.0" prefWidth="195.0" />
+      <TextField layoutX="273.0" layoutY="219.0" prefHeight="25.0" prefWidth="195.0" />
+      <HBox prefHeight="85.0" prefWidth="540.0" style="-fx-background-color: #347599;" />
+      <HBox layoutY="255.0" prefHeight="85.0" prefWidth="540.0" style="-fx-background-color: #347599;" />
+      <Label layoutX="186.0" layoutY="14.0" prefHeight="54.0" prefWidth="229.0" text="Modifier :" textFill="#ebebeb">
+         <font>
+            <Font name="Century Gothic Bold" size="42.0" />
+         </font>
+      </Label>
+      <Button layoutX="378.0" layoutY="285.0" mnemonicParsing="false" text="Valider" />
+      <Button fx:id="retour_btn" layoutX="432.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#retourner" text="Retour" />
+   </children>
+</AnchorPane>

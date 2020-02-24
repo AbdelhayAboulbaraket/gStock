@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="412.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentationLayer.AjouterVenteController">
+	<children>
+		<VBox layoutX="-1.0" prefHeight="400.0" prefWidth="107.0" />
+		<Pane prefHeight="415.0" prefWidth="809.0" style="-fx-background-color: #f1f7ff;" stylesheets="@../../../tablestyle.css">
+			<children>
+				<Label layoutX="367.0" layoutY="1.0" prefHeight="40.0" prefWidth="123.0" text="Ajouter :">
+					<font>
+						<Font name="Century Gothic Bold" size="20.0" />
+					</font>
+				</Label>
+				<TableView fx:id="tbData" layoutY="166.0" prefHeight="190.0" prefWidth="809.0">
+					<columns>
+						<TableColumn fx:id="produitColumn" prefWidth="164.0" text="Produit" />
+						<TableColumn fx:id="quantiteColumn" prefWidth="163.0" text="Quantité" />
+						<TableColumn fx:id="prixUnitaireColumn" prefWidth="154.0" text="Prix Unitaire" />
+						<TableColumn fx:id="totalColumn" prefWidth="125.0" text="Total" />
+						<TableColumn fx:id="clientColumn" prefWidth="219.0" text="Client" />
+						
+						
+
+
+
+
+					</columns>
+				</TableView>
+				<Button fx:id="vendre_btn" layoutX="285.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#ajouter" prefHeight="31.0" prefWidth="78.0" text="Vendre">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+				<Button fx:id="supprimer_btn" layoutX="368.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#supprimerVente" prefHeight="31.0" prefWidth="85.0" text="Supprimer">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <ChoiceBox fx:id="produit" layoutX="302.0" layoutY="47.0" prefHeight="25.0" prefWidth="189.0" />
+            <ChoiceBox fx:id="client" layoutX="302.0" layoutY="74.0" prefHeight="25.0" prefWidth="189.0" />
+            <Label layoutX="235.0" layoutY="105.0" text="Quantité    :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="235.0" layoutY="78.0" text="Client         :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="235.0" layoutY="51.0" text="Produit      :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="500.0" layoutY="105.0" text="En Stock    :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="qteField" layoutX="302.0" layoutY="101.0" prefHeight="25.0" prefWidth="189.0" />
+            <Button fx:id="ajouter_btn" layoutX="331.0" layoutY="126.0" mnemonicParsing="false" onMouseClicked="#ajouterPanier" prefHeight="8.0" prefWidth="131.0" text="Ajouter au panier">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="addProduit" layoutX="499.0" layoutY="47.0" mnemonicParsing="false" onMouseClicked="#ajouterProduit" text="+">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="AddClient" layoutX="499.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#ajouterClient" text="+">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="retour_btn" layoutX="457.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#retourner" prefHeight="31.0" prefWidth="85.0" text="Retour">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="enStockLabel" layoutX="581.0" layoutY="105.0" />
+			</children>
+		</Pane>
+	</children>
+</AnchorPane>

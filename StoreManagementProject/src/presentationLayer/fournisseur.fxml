@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #f1f7ff;" stylesheets="@tablestyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentationLayer.FournisseurController">
+   <children>
+      <VBox layoutX="-1.0" prefHeight="400.0" prefWidth="107.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="inventaire_btn" mnemonicParsing="false" onMouseClicked="#show_inventaire" prefHeight="80.0" prefWidth="111.0" stylesheets="@../../../tablestyle.css" text="INVENTAIRE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="vente_btn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#show_ventes" prefHeight="80.0" prefWidth="111.0" stylesheets="@../../../tablestyle.css" text="VENTES">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="fournisseur_btn" layoutX="10.0" layoutY="90.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="111.0" stylesheets="@../../../tablestyle.css" text="FOURNISSEURS">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="employer_btn" layoutX="10.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#show_employer" prefHeight="80.0" prefWidth="111.0" stylesheets="@../../../tablestyle.css" text="EMPLOYERS">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="client_btn" layoutX="10.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#show_client" prefHeight="80.0" prefWidth="111.0" stylesheets="@../../../tablestyle.css" text="CLIENTS">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <Pane layoutX="106.0" prefHeight="400.0" prefWidth="694.0" stylesheets="@../../../tablestyle.css">
+         <children>
+            <Label layoutX="117.0" layoutY="77.0" text="Rechercher :" />
+            <TextField fx:id="rechercherField" layoutX="200.0" layoutY="73.0" prefHeight="25.0" prefWidth="316.0" />
+            <Button fx:id="rechercher_btn" layoutX="532.0" layoutY="73.0" mnemonicParsing="false" onMouseClicked="#rechercher" text="Search" />
+            <Label layoutX="286.0" layoutY="14.0" prefHeight="40.0" prefWidth="123.0" text="Fournisseurs">
+               <font>
+                  <Font name="Century Gothic Bold" size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="table" layoutY="126.0" prefHeight="200.0" prefWidth="694.0">
+              <columns>
+                <TableColumn fx:id="Id" prefWidth="56.0" text="Id" />
+                <TableColumn fx:id="Nom" prefWidth="153.0" text="Nom" />
+                <TableColumn fx:id="Tel" minWidth="0.0" prefWidth="117.0" text="Tel" />
+                <TableColumn fx:id="Email" prefWidth="163.0" text="\@" />
+                <TableColumn fx:id="Adresse" prefWidth="204.0" text="Adresse" />
+                
+                
+              	
+              	
+              </columns>
+            </TableView>
+            <Button fx:id="ajouter_btn" layoutX="484.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#ajouter" text="Ajouter" />
+            <Button fx:id="modifier_btn" layoutX="539.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#modifier" text="Modifier" />
+            <Button fx:id="supprimer_btn" layoutX="600.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#supprimer" text="Supprimer" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
